@@ -36,7 +36,7 @@ function updateMessage(distance) {
     var secondsInHour = 3600;
     var message = "Mensaje";
     if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
-        message = "Mensaje para más de 2 días y 12 horas.";
+        message = "Hola Lilia, soy Newton, la IA de Fernando, Fer me encargó que genere un detalle de fin de año para tí, pero me estoy demorando (pipipi, me van a matar causa). Te cuento, estoy entrenado con toda la conversacion entre Fer y tú, así que entra de vez en cuando, te estaré enviando un mensaje como Fer lo haría. Mensajes se activan el 29/12 a las 5:30 pm";
     } else if (distance > 2 * 24 * secondsInHour * 1000) {
         message = "Mensaje para menos de 2 días y 12 horas pero más de 2 días.";
     } // Continúa con las demás condiciones aquí.
