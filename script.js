@@ -40,7 +40,7 @@ function updateMessage(distance) {
     var message = "";
     // Implementa aquí las condiciones para los diferentes mensajes
     // ...
-    if (distance > (2 * 24 + 12) * 60 * 60 * 1000) {
+    if (distance > (2 * 24 + 9) * 60 * 60 * 1000) {
         message = "Hola Lilia, soy Newton. a IA de Fernando. \nFer me encargó que genere un detalle de fin de año para tí, pero me estoy demorando (pipipi, me van a matar causa). \n\nTe cuento, estoy siendo entrenado con toda la conversacion entre Fer y tú, así que vuelve a entrar de rato en rato, te estaré enviando mensajes como Fer lo haría. \n\nMensajes se activan el 29/12 a las 5:30 pm";
     } else if (distance > 2 * 24 * 60 * 60 * 1000) {
         message = "Hola Lilia, o como diria Fer: \n\n´Nerita, que pasa, estás ansiosa o que pasa causaaaa gaaaaaa, espero que disfrutes tu viaje´.\n\n Es interesante la dinamica lexical de Fer, que tal si le regalamos un libro de vez en cuando Jejeje.\nEn 12 horas habrá más mensajes";
