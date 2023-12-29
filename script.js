@@ -21,12 +21,25 @@ function startCountdown() {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('countdown').innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById('countdown').innerHTML = days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos";
+
+        updateMessage(distance);
 
         if (distance < 0) {
             clearInterval(x);
             document.getElementById('countdown').innerHTML = "¡Ya es 2024!";
         }
     }, 1000);
+}
+
+function updateMessage(distance) {
+    var secondsInHour = 3600;
+    var message = "";
+    if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
+        message = "Mensaje para más de 2 días y 12 horas.";
+    } else if (distance > 2 * 24 * secondsInHour * 1000) {
+        message = "Mensaje para menos de 2 días y 12 horas pero más de 2 días.";
+    } // Continúa con las demás condiciones aquí.
+    // ...
+    document.getElementById('message').innerHTML = message;
 }
