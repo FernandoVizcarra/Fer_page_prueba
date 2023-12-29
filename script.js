@@ -34,7 +34,7 @@ function startCountdown() {
 
 function updateMessage(distance) {
     var secondsInHour = 3600;
-    var message = "";
+    var message = "Mensaje";
     if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
         message = "Mensaje para más de 2 días y 12 horas.";
     } else if (distance > 2 * 24 * secondsInHour * 1000) {
