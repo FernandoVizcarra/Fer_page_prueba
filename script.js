@@ -34,10 +34,13 @@ function startCountdown() {
 
 function updateMessage(distance) {
     var message = "";
-    // Aquí incluyes las condiciones y asignas el mensaje correspondiente
-    // Por ejemplo:
-    if (distance > (2 * 24 + 12) * 60 * 60 * 1000) {
+    var secondsInHour = 3600;
+    // Ejemplo de implementación de las condiciones
+    if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
         message = "Mensaje para más de 2 días y 12 horas.";
-    } else if (distance > 2 * 24 * 60 * 60 * 1000) {
+    } else if (distance > 2 * 24 * secondsInHour * 1000) {
         message = "Mensaje para menos de 2 días y 12 horas pero más de 2 días.";
-    } // Contin
+    } // Continúa con las demás condiciones aquí.
+    // ...
+    document.getElementById('message').innerHTML = message;
+}
