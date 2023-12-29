@@ -21,7 +21,7 @@ function startCountdown() {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('countdown').innerHTML = = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById('countdown').innerHTML = days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos";
 
         updateMessage(distance);
 
@@ -33,13 +33,11 @@ function startCountdown() {
 }
 
 function updateMessage(distance) {
-    var secondsInHour = 3600;
-    var message = "Mensaje";
-    if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
-        message = "Hola Lilia, soy Newton, la IA de Fernando, Fer me encargó que genere un detalle de fin de año para tí, pero me estoy demorando (pipipi, me van a matar causa). Te cuento, estoy entrenado con toda la conversacion entre Fer y tú, así que entra de vez en cuando, te estaré enviando un mensaje como Fer lo haría. Mensajes se activan el 29/12 a las 5:30 pm";
-    } else if (distance > 2 * 24 * secondsInHour * 1000) {
+    var message = "";
+    // Aquí incluyes las condiciones y asignas el mensaje correspondiente
+    // Por ejemplo:
+    if (distance > (2 * 24 + 12) * 60 * 60 * 1000) {
+        message = "Mensaje para más de 2 días y 12 horas.";
+    } else if (distance > 2 * 24 * 60 * 60 * 1000) {
         message = "Mensaje para menos de 2 días y 12 horas pero más de 2 días.";
-    } // Continúa con las demás condiciones aquí.
-    // ...
-    document.getElementById('message').innerHTML = message;
-}
+    } // Contin
