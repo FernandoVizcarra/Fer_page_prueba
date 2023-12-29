@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('loginButton').addEventListener('click', checkPassword);
+});
+
 function checkPassword() {
     var password = document.getElementById('password').value;
     if (password === 'melocoton') {
@@ -34,13 +38,7 @@ function startCountdown() {
 
 function updateMessage(distance) {
     var message = "";
-    var secondsInHour = 3600;
-    // Ejemplo de implementación de las condiciones
-    if (distance > (2 * 24 + 12) * secondsInHour * 1000) {
-        message = "Mensaje para más de 2 días y 12 horas.";
-    } else if (distance > 2 * 24 * secondsInHour * 1000) {
-        message = "Mensaje para menos de 2 días y 12 horas pero más de 2 días.";
-    } // Continúa con las demás condiciones aquí.
+    // Implementa aquí las condiciones para los diferentes mensajes
     // ...
     document.getElementById('message').innerHTML = message;
 }
