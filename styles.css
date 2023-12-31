@@ -7,3 +7,11 @@ body {
     margin-top: 20px;
 }
 
+.resized-image {
+    width: 400px;
+}
+
+.resized-image1 {
+    width: 600px;
+}
+
